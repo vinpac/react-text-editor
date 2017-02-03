@@ -1,0 +1,21 @@
+.message-composer {
+  position: relative;
+  padding: $message-spacer $message-spacer ($message-spacer * 1.5);
+}
+
+.message-composer-textarea {
+  max-height: 400px;
+  resize: none;
+  border-width: 2px;
+
+  &:focus {
+    border-color: #aaa;
+  }
+}
+
+.message-composer-footer {
+  position: absolute;
+  bottom: .5rem;
+  left: $message-spacer;
+  font-size: .82em;
+}

@@ -1,0 +1,7 @@
+.borderless {
+  border-color: transparent;
+
+  @include hover-focus {
+    border-color: transparent;
+  }
+}

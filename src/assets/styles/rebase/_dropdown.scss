@@ -1,0 +1,29 @@
+.dropdown-up {
+  .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 15px;
+
+    &::after {
+      border-width: 8px 8px 0;
+      top: auto;
+      bottom: -8px;
+    }
+
+    &::before {
+      border-width: 9px 9px 0;
+      top: auto;
+      bottom: -9px;
+    }
+  }
+}
+
+.dropdown.open {
+  .btn-text-accent {
+    color: #32325d;
+  }
+
+  .text-light {
+    color: #fff;
+  }
+}

@@ -1,0 +1,78 @@
+.form-select {
+  position: relative;
+
+  > select {
+    appearance: none;
+    width: 100%;
+  }
+
+  &::before {
+    @include fa-icon();
+
+    content: $fa-var-angle-down;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    top: 10px;
+    font-size: 20px;
+    margin: auto;
+    pointer-events: none !important;
+  }
+}
+
+.input-outline-light {
+  background: none;
+  color: #fff;
+  border-color: rgba(#fff, 0.6);
+
+  @include hover-focus {
+    border-color: #fff;
+  }
+
+  option {
+    color: $text-color-base;
+  }
+}
+
+.input-transparent {
+  border-color: transparent;
+  background: none;
+}
+
+.form-select-empty {
+  &::before {
+    color: #80809e;
+  }
+
+  select {
+    color: #80809e;
+
+    option {
+      color: $text-color-base;
+    }
+  }
+}
+
+.input-lg,
+.form-group-lg .input {
+  font-size: 22px;
+  border-radius: 6px;
+  padding: 0.7rem;
+}
+
+.form-group-lg {
+  label {
+    font-size: 22px;
+  }
+
+  .form-select .input {
+    padding-right: 40px;
+  }
+}
+
+.form-group-lg .form-select::before,
+.form-select.input-lg::before {
+  font-size: 24px;
+  top: 13px;
+  bottom: 13px;
+}

@@ -1,0 +1,2 @@
+.navbar-default { @include navbar-variant(null, $text-color-base); }
+.navbar-light { @include navbar-variant(null, #fff); }

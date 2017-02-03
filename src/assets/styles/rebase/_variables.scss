@@ -1,0 +1,38 @@
+$color-primary: #0070e0;
+$color-primary-dark: darken($color-primary, 20%);
+$color-accent: #ff5a5f;
+$color-accent-dark: #32325d;
+
+$font-family-base: 'Roboto', sans-serif;
+$text-semibold-weight: 500;
+$text-light-weight: 300;
+$link-color: #0070e0;
+
+
+$text-muted: #8898aa;
+$text-muted-dark: darken($text-muted, 10%);
+$text-color-base: darken($text-muted, 35%);
+
+$button-font-weight: $text-semibold-weight;
+$card-header-bg: #f6f7f9;
+$border-radius: 3px;
+$input-border-color: #dad7d4;
+$input-border-radius: $border-radius;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * 0.75),
+    y: ($spacer-y * 1)
+  ),
+  2: (
+    x: $spacer-x,
+    y: ($spacer-y * 2)
+  ),
+  3: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 3)
+  )
+);

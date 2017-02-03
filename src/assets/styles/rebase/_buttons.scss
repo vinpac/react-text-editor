@@ -1,0 +1,112 @@
+//
+// Contextual colors
+//
+.btn-primary {
+  @include button-variant($color-primary);
+}
+
+.btn-accent {
+  @include button-variant($color-accent);
+}
+
+.btn-success {
+  @include button-variant($color-success);
+}
+
+.btn-warning {
+  @include button-variant($color-warning);
+}
+
+.btn-light-muted {
+  background: rgba(#fff, 0.1);
+  color: #fff;
+  border-color: transparent !important;
+
+  &:hover {
+    background: rgba(#fff, 0.15);
+  }
+
+  &:active {
+    background: rgba(#fff, 0.2);
+  }
+}
+
+// Outline
+.btn-outline-accent {
+  @include button-outline-variant($color-accent);
+}
+
+.btn-outline-primary {
+  @include button-outline-variant($color-primary);
+}
+
+.btn-outline-light {
+  @include button-outline-variant(#fff);
+}
+
+.btn-outline-muted {
+  @include button-outline-variant($text-muted);
+}
+
+// Sizing
+.btn-sm {
+  padding: ($btn-padding-y * 0.9) ($btn-padding-x * 0.9);
+  font-size: 0.875rem;
+}
+
+.form-group-md .btn,
+.btn-md {
+  padding: ($btn-padding-y * 1.125) ($btn-padding-x * 1.125);
+  font-size: 1.125rem;
+}
+
+.form-group-lg .btn,
+.btn-lg {
+  padding: ($btn-padding-y * 1.5) ($btn-padding-x * 1.5);
+  font-size: 1.25rem;
+}
+
+// Text
+.btn-text {
+  @include button-text-variant($text-color-base);
+}
+
+.btn-text-muted {
+  @include button-text-variant($text-muted-dark);
+}
+
+.btn-text-accent {
+  @include button-text-variant($color-accent, #32325d);
+}
+
+.btn-text-light {
+  @include button-text-variant(rgba(#fff, 0.8), #fff);
+}
+
+.btn-link {
+  @include button-text-variant($link-color);
+}
+
+// Size
+// ...
+
+// Addons
+.btn-loading-spin {
+  position: relative;
+
+  select {
+    color: transparent;
+  }
+
+  .loading-spin {
+    @include absolute-center();
+  }
+
+  > span {
+    opacity: 0;
+  }
+}
+
+.btn:disabled {
+  opacity: 0.8;
+}

@@ -1,0 +1,23 @@
+// Text weight
+.text-semibold,
+.text-weight-semibold {
+  font-weight: $text-semibold-weight;
+}
+
+.text-weight-light {
+  font-weight: $text-light-weight;
+}
+
+// Contextual text colors
+@include text-emphasis-variant('.text-base', $text-color-base);
+@include text-emphasis-variant('.text-primary-dark', $color-primary-dark);
+
+.paragraph {
+  line-height: 1.5;
+  font-size: 21px;
+  font-family: Georgia, serif;
+}
+
+.text-lg {
+  font-size: 22px;
+}

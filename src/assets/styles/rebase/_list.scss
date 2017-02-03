@@ -1,0 +1,32 @@
+.list-blocks {
+  .list-item {
+    padding: 6px 15px;
+    color: #525f7f;
+    display: block;
+    border-radius: $border-radius;
+    border: 0;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      background: #f6f9fc;
+    }
+
+    &:hover,
+    &:focus {
+      color: #32325d;
+    }
+
+    &:active {
+      background: #e6ebf1;
+    }
+  }
+
+  a.list-item {
+    &,
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

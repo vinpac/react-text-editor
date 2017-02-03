@@ -1,0 +1,23 @@
+$react-dates-color-primary: $color-primary;
+$react-dates-color-primary-dark: $color-primary-dark;
+$react-dates-color-focus: transparent;
+$react-dates-color-text-focus: $color-primary;
+$react-dates-color-border: $input-border-color;
+
+@import '~react-dates/css/variables.scss';
+@import '~react-dates/css/styles.scss';
+
+.SingleDatePicker {
+  width: 100%;
+}
+
+.DateInput {
+  font-weight: $font-weight-normal;
+  width: 100%;
+  padding: 4px;
+}
+
+.SingleDatePickerInput,
+.DateInput {
+  border-radius: $border-radius;
+}

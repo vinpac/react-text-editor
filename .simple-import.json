@@ -1,0 +1,23 @@
+{
+  "javascript": {
+    "ignore": [
+      "build",
+      ".git",
+      "node_modules"
+    ],
+    "dictionary": {
+      "modules": {
+        "cx": "classnames"
+      },
+      "module_exports": {
+        "immutable": [
+          "Map",
+          "Set",
+          "Stack",
+          "List",
+          "Stack"
+        ]
+      }
+    }
+  }
+}

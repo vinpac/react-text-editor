@@ -1,0 +1,10 @@
+.post-editor {
+  font-size: 20px;
+  line-height: 32px;
+  word-wrap: break-word;
+  word-break: break-word;
+
+  .editor-block:last-child {
+    min-height: 50vh;
+  }
+}

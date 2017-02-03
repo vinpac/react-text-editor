@@ -1,0 +1,43 @@
+.progressive-image {
+  position: relative;
+  max-width: 100%;
+  display: block;
+  vertical-align: top;
+
+  .progressive-image-ratio {
+    display: block;
+    max-width: 100%;
+    position: relative;
+    height: 0;
+  }
+
+  .progressive-image-cover {
+    filter: blur(15px);
+    transform: scale(1.05);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .progressive-media-cover,
+  .progressive-image-large {
+    width: 100%;
+    //transition: opacity .15s linear;
+  }
+
+  .progressive-image-large {
+    //opacity: 0
+  }
+
+  &.loaded {
+    .progressive-image-large {
+      opacity: 1;
+    }
+  }
+
+}

@@ -1,0 +1,119 @@
+$editor-context-button-size: 36px;
+
+.editor-context-button {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  height: $editor-context-button-size;
+  margin-top: -6px;
+  margin-left: ($editor-context-button-size * -1) - 15px;
+
+  .btn {
+    transform: scale(.8);
+    transition: opacity .2s, transform .2s ease-in-out;
+    width: $editor-context-button-size;
+    height: $editor-context-button-size;
+    border: 1px solid rgba(#000, .3);
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 0 0 5px #fff;
+
+    &:hover {
+      border: 1px solid rgba(#000, .5);
+    }
+
+    &::after,
+    &::before {
+      @include absolute-center();
+
+      content: '';
+      display: block;
+      background: $color-primary;
+    }
+
+    &::after {
+      width: $editor-context-button-size / 2;
+      height: 2px;
+    }
+
+    &::before {
+      width: 2px;
+      height: $editor-context-button-size / 2;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+
+    .btn {
+      opacity: 1;
+      transition: transform .3s;
+      transform: scale(1);
+    }
+  }
+}
+
+.editor-context-modifiers {
+  position: absolute;
+  right: -408px;
+  width: 400px;
+  top: 0;
+  vertical-align: top;
+  visibility: hidden;
+
+}
+
+.editor-context-item {
+  width: $editor-context-button-size / 10;
+  height: $editor-context-button-size;
+  padding: 1px 8px;
+  display: block;
+  text-align: center;
+  float: left;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+  color: #637282;
+  opacity: 0;
+  font-size: 20px;
+  transition: width .2s ease-in, opacity .4s ease-in;
+
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.editor-context-divider {
+  width: 1px;
+  height: $editor-context-button-size;
+  margin: 0 10px;
+  background: #ccc;
+  display: block;
+  float: left;
+  opacity: 0;
+  transition: opacity .6s ease-in;
+}
+
+.editor-context-button.active {
+  .btn {
+    transform: rotate(225deg);
+  }
+
+  .editor-context-item {
+    width: $editor-context-button-size;
+    opacity: 1;
+  }
+
+  .editor-context-divider {
+    opacity: 1;
+  }
+
+  .editor-context-modifiers {
+    visibility: visible;
+  }
+}

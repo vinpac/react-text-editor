@@ -1,0 +1,16 @@
+
+.form-file {
+  position: relative;
+  overflow: hidden;
+
+  input[type='file'] {
+    position: absolute;
+    font-size: 200px;
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+}

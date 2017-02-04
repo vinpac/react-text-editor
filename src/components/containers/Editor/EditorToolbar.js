@@ -14,7 +14,14 @@ class EditorToolbar extends React.Component {
   state = {};
 
   componentWillReceiveProps(nextProps) {
-    setTimeout(() => this.handleSelectionChange(nextProps.visible), 0);
+    this.timeout = setTimeout(
+      () => this.handleSelectionChange(nextProps.visible),
+      0,
+    );
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
   }
 
   @autobind

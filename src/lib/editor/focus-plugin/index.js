@@ -93,10 +93,7 @@ export default ({ initialState, theme }) => {
 
       return {
         props: {
-          isFocused: focusableBlockIsSelected(
-            editorState,
-            store,
-          ),
+          isFocused: contentBlock.getKey() === store.get('focusedBlock'),
           isCollapsedSelection: true,
           setFocusToBlock: () => {
             store.set('focusedBlock', contentBlock.getKey());

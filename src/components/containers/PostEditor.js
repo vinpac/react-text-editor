@@ -14,6 +14,7 @@ import { addImage } from '../../lib/editor/modifiers';
 import { keyBindingFn } from '../../lib/editor/utils';
 import EditorAlignmentTool from './Editor/EditorAlignmentTool';
 import EditorBlocksTool from './Editor/EditorBlocksTool';
+import EditorContextButton from './Editor/EditorContextButton';
 
 class PostEditor extends PureComponent {
   constructor(props) {
@@ -42,7 +43,6 @@ class PostEditor extends PureComponent {
       ),
     }, () => {
       this.editor.focus();
-      this.insertImage();
     });
   }
 
@@ -87,14 +87,6 @@ class PostEditor extends PureComponent {
   }
 
   @autobind
-  insertImage() {
-    this.onChange(addImage(
-      this.state.editorState,
-      'https://cdn-images-1.medium.com/max/600/1*oGZuRsqpDMUYyl9-ArFK3Q.png',
-    ));
-  }
-
-  @autobind
   handleKeyCommand(command): string {
     const { editorState } = this.state;
     const newState = RichUtils.handleKeyCommand(editorState, command);
@@ -115,9 +107,6 @@ class PostEditor extends PureComponent {
 
     return (
       <div className="post-editor">
-        <button className="btn btn-primary" onClick={this.insertImage}>
-          Add image
-        </button>
         { renderEditor &&
           <div className="post-editor-inner">
             <Editor
@@ -137,6 +126,10 @@ class PostEditor extends PureComponent {
             <EditorAlignmentTool
               editorState={editorState}
               store={this.alignmentStore}
+            />
+            <EditorContextButton
+              editorState={editorState}
+              setEditorState={this.onChange}
             />
           </div>
         }
